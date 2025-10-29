@@ -42,9 +42,12 @@ export default function Home({ setAuthenticated }) {
 
   return (
     <div className="container">
+      <a href="/zakazlist" className="link">спсок закзов</a>
       <h2>Home</h2>
       <p>{message || "Welcome!"}</p>
+
       <button onClick={handleLogout}>Logout</button>
     </div>
+    
   );
 }
