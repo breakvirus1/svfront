@@ -1,0 +1,98 @@
+.zakaz-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.zakaz-list-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-zakaz-form {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.zakaz-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.add-zakaz-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-zakaz-button:hover {
+    background-color: #45a049;
+}
+
+.zakaz-list {
+    list-style: none;
+    padding: 0;
+}
+
+.zakaz-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.zakaz-item:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.zakaz-header {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.zakaz-id {
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.zakaz-sum {
+    color: #666;
+    margin: 0;
+}
+
+.sub-zakaz-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.sub-zakaz-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.sub-zakaz-item:last-child {
+    border-bottom: none;
+}
+
+.sub-zakaz-material,
+.sub-zakaz-width,
+.sub-zakaz-height,
+.sub-zakaz-cena,
+.sub-zakaz-total {
+    margin: 5px 0;
+    color: #555;
+}
