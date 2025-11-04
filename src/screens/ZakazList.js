@@ -7,13 +7,23 @@ const ZakazList = () => {
     const [zakazList, setZakazList] = useState([]);
     const [subZakazList, setSubZakazList] = useState({});
     const [newZakazSum, setNewZakazSum] = useState("");
+    const [useridresponse, setUseridresponse] = useState("");
+    const [usernameresponse, setUsernameresponse] = useState("");
     const navigate = useNavigate();
+
 
     useEffect(() => {
         const fetchZakazList = async () => {
             try {
+
+
+                const useridresponse = await axios.get('api/user/me-id');
+                const usernameresponse = await axios.get('api/user/me-name');
+                setUseridresponse(useridresponse.data);
+                setUsernameresponse(usernameresponse.data);
                 const response = await axios.get('/api/users/zakaz/all', {
-                    params: { id: 1 }
+
+                    params: { id: parseInt(useridresponse.data) }
                 });
                 setZakazList(response.data.zakazList);
             } catch (error) {
@@ -51,7 +61,10 @@ const ZakazList = () => {
 
     return (
         <div className="zakaz-list-container">
-            <h1 className="zakaz-list-title">Zakaz List</h1>
+            <h1 className="zakaz-list-title">Список заказов</h1>
+            <h2 className="zakaz-list-title">Твой id: {useridresponse}</h2>
+            <h2 className="zakaz-list-title">Вошел как: {usernameresponse}</h2>
+
             <div className="add-zakaz-form">
                 <input
                     type="number"
